@@ -74,7 +74,7 @@ export const DATA = {
     {
       company: "E-xisaabi",
       badges: [],
-      href: "",
+      href: "https://exisaabi.app",
       location: "Kismayo, Somalia",
       title: "Co-founder",
       logoUrl: "/exisaabi.jpeg",
