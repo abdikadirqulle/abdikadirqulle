@@ -7,6 +7,7 @@ import type { Metadata } from "next"
 import { Inter as FontSans } from "next/font/google"
 import { Analytics } from "@vercel/analytics/react"
 import "./globals.css"
+import { StarsBackground } from "@/components/ui/stars-background"
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -56,17 +57,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={cn(
-          "min-h-screen bg-background font-sans antialiased max-w-2xl mx-auto py-12 sm:py-24 px-6",
-          fontSans.variable
-        )}
-      >
-        <ThemeProvider attribute="class" defaultTheme="light">
+      <body>
+        <ThemeProvider attribute="class" defaultTheme="dark" forcedTheme="dark">
           <TooltipProvider delayDuration={0}>
-            {children}
-            <Analytics />
-            <Navbar />
+            <StarsBackground>
+              <div
+                className={cn(
+                  "min-h-screen font-sans antialiased max-w-2xl mx-auto py-12 sm:py-24 px-6",
+                  fontSans.variable
+                )}
+              >
+                {children}
+                <Analytics />
+                <Navbar />
+              </div>
+            </StarsBackground>
           </TooltipProvider>
         </ThemeProvider>
       </body>

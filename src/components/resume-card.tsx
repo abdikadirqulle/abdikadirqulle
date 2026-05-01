@@ -44,9 +44,9 @@ export const ResumeCard = ({
       className="block cursor-pointer"
       onClick={handleClick}
     >
-      <Card className="flex">
+      <Card className="flex bg-background/50 backdrop-blur-sm">
         <div className="flex-none">
-          <Avatar className="border size-12 m-auto bg-muted-background dark:bg-foreground">
+          <Avatar className="border size-12 m-auto bg-muted/50">
             <AvatarImage
               src={logoUrl}
               alt={altText}
@@ -58,14 +58,14 @@ export const ResumeCard = ({
         <div className="flex-grow ml-4 items-center flex-col group">
           <CardHeader>
             <div className="flex items-center justify-between gap-x-2 text-base">
-              <h3 className="inline-flex items-center justify-center font-semibold leading-none text-xs sm:text-sm">
+              <h3 className="inline-flex items-center justify-center font-semibold leading-none text-xs sm:text-sm text-foreground">
                 {title}
                 {badges && (
                   <span className="inline-flex gap-x-1">
                     {badges.map((badge, index) => (
                       <Badge
                         variant="secondary"
-                        className="align-middle text-xs"
+                        className="align-middle text-xs bg-muted/50"
                         key={index}
                       >
                         {badge}

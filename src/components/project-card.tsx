@@ -1,31 +1,31 @@
-import { Badge } from "@/components/ui/badge";
+import { Badge } from "@/components/ui/badge"
 import {
   Card,
   CardContent,
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { cn } from "@/lib/utils";
-import Image from "next/image";
-import Link from "next/link";
-import Markdown from "react-markdown";
+} from "@/components/ui/card"
+import { cn } from "@/lib/utils"
+import Image from "next/image"
+import Link from "next/link"
+import Markdown from "react-markdown"
 
 interface Props {
-  title: string;
-  href?: string;
-  description: string;
-  dates: string;
-  tags: readonly string[];
-  link?: string;
-  image?: string;
-  video?: string;
+  title: string
+  href?: string
+  description: string
+  dates: string
+  tags: readonly string[]
+  link?: string
+  image?: string
+  video?: string
   links?: readonly {
-    icon: React.ReactNode;
-    type: string;
-    href: string;
-  }[];
-  className?: string;
+    icon: React.ReactNode
+    type: string
+    href: string
+  }[]
+  className?: string
 }
 
 export function ProjectCard({
@@ -43,7 +43,7 @@ export function ProjectCard({
   return (
     <Card
       className={
-        "flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full"
+        "flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full bg-background/50 backdrop-blur-sm"
       }
     >
       <Link
@@ -72,9 +72,13 @@ export function ProjectCard({
       </Link>
       <CardHeader className="px-2">
         <div className="space-y-1">
-          <CardTitle className="mt-1 text-base">{title}</CardTitle>
-          <time className="font-sans text-xs">{dates}</time>
-          <div className="hidden font-sans text-xs underline print:visible">
+          <CardTitle className="mt-1 text-base text-foreground">
+            {title}
+          </CardTitle>
+          <time className="font-sans text-xs text-muted-foreground">
+            {dates}
+          </time>
+          <div className="hidden font-sans text-xs underline print:visible text-muted-foreground">
             {link?.replace("https://", "").replace("www.", "").replace("/", "")}
           </div>
           <Markdown className="prose max-w-full text-pretty font-sans text-xs text-muted-foreground dark:prose-invert">
@@ -87,7 +91,7 @@ export function ProjectCard({
           <div className="mt-2 flex flex-wrap gap-1">
             {tags?.map((tag) => (
               <Badge
-                className="px-1 py-0 text-[10px]"
+                className="px-1 py-0 text-[10px] bg-muted/50"
                 variant="secondary"
                 key={tag}
               >
@@ -102,7 +106,10 @@ export function ProjectCard({
           <div className="flex flex-row flex-wrap items-start gap-1">
             {links?.map((link, idx) => (
               <Link href={link?.href} key={idx} target="_blank">
-                <Badge key={idx} className="flex gap-2 px-2 py-1 text-[10px]">
+                <Badge
+                  key={idx}
+                  className="flex gap-2 px-2 py-1 text-[10px] bg-muted/50"
+                >
                   {link.icon}
                   {link.type}
                 </Badge>
@@ -112,5 +119,5 @@ export function ProjectCard({
         )}
       </CardFooter>
     </Card>
-  );
+  )
 }
