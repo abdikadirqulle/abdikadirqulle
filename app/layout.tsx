@@ -1,4 +1,5 @@
 import Navbar from "@/components/navbar"
+import { SiteFooter } from "@/components/site-footer"
 import { DATA } from "@/data/resume"
 import { cn } from "@/lib/utils"
 import { Analytics } from "@vercel/analytics/react"
@@ -61,9 +62,10 @@ export default function RootLayout({
         )}
       >
         <Navbar />
-        <div className="mx-auto max-w-6xl px-6 pb-24 pt-10 sm:px-8 sm:pt-14">
+        <div className="mx-auto max-w-6xl px-6 pb-8 pt-10 sm:px-8 sm:pt-14">
           {children}
         </div>
+        <SiteFooter />
         <Analytics />
       </body>
     </html>

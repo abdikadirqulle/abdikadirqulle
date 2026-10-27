@@ -1,6 +1,5 @@
 import BlurFade from "@/components/magicui/blur-fade"
 import { ProjectCard } from "@/components/project-card"
-import { SiteFooter } from "@/components/site-footer"
 import { Badge } from "@/components/ui/badge"
 import { DATA } from "@/data/resume"
 import Image from "next/image"
@@ -248,7 +247,6 @@ export default function Page() {
         </BlurFade>
       </section>
 
-      <SiteFooter />
     </main>
   )
 }

@@ -85,10 +85,22 @@ export const DATA = {
   },
   work: [
     {
+      company: "E-xisaabi",
+      badges: [],
+      href: "https://exisaabi.app",
+      location: "Somalia",
+      title: "Co-founder & CTO",
+      logoUrl: "/exisaabi.jpeg",
+      start: "March 2024",
+      end: "Present",
+      description:
+        "Co-founded financial management software for small businesses. As CTO, lead product architecture, engineering, core accounting features, UX, performance, and client onboarding.",
+    },
+    {
       company: "Casritek",
       href: "https://casritek.com",
       badges: [],
-      location: "Kismayo, Somalia",
+      location: "Somalia",
       title: "Founder & CEO",
       logoUrl: "/casritek-logo.jpg",
       start: "Nov 2024",
@@ -97,16 +109,16 @@ export const DATA = {
         "Digital and software agency building websites, custom systems, and digital platforms for businesses, NGOs, and public institutions. Lead discovery, design, engineering, and post-launch support end to end.",
     },
     {
-      company: "E-xisaabi",
+      company: "MaragCloud",
+      href: "https://casritek.vercel.app/work/maragcloud",
       badges: [],
-      href: "https://exisaabi.app",
       location: "Somalia",
-      title: "Co-founder",
-      logoUrl: "/exisaabi.jpeg",
-      start: "March 2024",
+      title: "Founder",
+      logoUrl: "/maragcloud-mark.png",
+      start: "2025",
       end: "Present",
       description:
-        "Co-founded financial management software for small businesses. Led product development, core accounting features, UX, performance, and client onboarding.",
+        "Cloud notary management system for notary offices — document preparation, digital register with reference numbers, clients, payments, staff permissions, and a secure archive, in English and Somali.",
     },
     {
       company: "e-safar",
