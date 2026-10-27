@@ -182,6 +182,38 @@ export const DATA = {
       video: "",
     },
     {
+      title: "Trackly AI",
+      href: "https://personal-performance-app-api.vercel.app/",
+      dates: "2025 – Present",
+      active: true,
+      description:
+        "AI-powered personal performance mobile OS — habits, nutrition, workouts, recovery, and coaching in one system.",
+      links: [
+        {
+          type: "Preview",
+          href: "https://personal-performance-app-api.vercel.app/",
+        },
+      ],
+      image: "/projects/trackly-ai.jpg",
+      video: "",
+    },
+    {
+      title: "SomScholarships",
+      href: "https://som-scholarships.vercel.app/",
+      dates: "2025 – Present",
+      active: true,
+      description:
+        "Scholarship discovery for Somali students — verified eligibility, real deadlines, and links to official sources.",
+      links: [
+        {
+          type: "Preview",
+          href: "https://som-scholarships.vercel.app/",
+        },
+      ],
+      image: "/projects/som-scholarships.jpg",
+      video: "",
+    },
+    {
       title: "Annual Planning and Activities Management System",
       href: "https://casritek.vercel.app/work/apams",
       dates: "2025",
