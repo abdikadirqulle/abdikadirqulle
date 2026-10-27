@@ -1,5 +1,7 @@
 import BlurFade from "@/components/magicui/blur-fade"
 import { ProjectCard } from "@/components/project-card"
+import { SiteFooter } from "@/components/site-footer"
+import { Badge } from "@/components/ui/badge"
 import { DATA } from "@/data/resume"
 import Image from "next/image"
 import Link from "next/link"
@@ -10,7 +12,7 @@ export default function Page() {
   return (
     <main className="flex flex-col">
       {/* Hero */}
-      <section className="grid items-center gap-10 pb-20 pt-4 md:grid-cols-[1.05fr_0.95fr] md:gap-14 md:pb-28 md:pt-8">
+      <section className="grid items-center gap-10 pb-20 pt-2 md:grid-cols-[1fr_1fr] md:gap-12 md:pb-28 md:pt-4">
         <BlurFade delay={DELAY}>
           <div className="space-y-6">
             <p className="text-sm font-medium tracking-[0.18em] text-neutral-400 uppercase">
@@ -40,21 +42,24 @@ export default function Page() {
         </BlurFade>
 
         <BlurFade delay={DELAY * 2}>
-          <div className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden rounded-[2rem] bg-neutral-200 shadow-[0_24px_80px_rgba(0,0,0,0.12)] md:mx-0 md:max-w-none">
+          <div className="relative mx-auto aspect-[3/4] w-full max-w-sm overflow-hidden rounded-[2rem] bg-neutral-200 shadow-[0_24px_80px_rgba(0,0,0,0.12)] md:mx-0 md:max-w-md lg:max-w-lg">
             <Image
               src={DATA.avatarUrl}
               alt={DATA.name}
               fill
               priority
-              sizes="(max-width: 768px) 90vw, 42vw"
-              className="object-cover object-top"
+              sizes="(max-width: 768px) 90vw, 40vw"
+              className="object-cover object-[center_15%]"
             />
           </div>
         </BlurFade>
       </section>
 
       {/* About */}
-      <section id="about" className="scroll-mt-24 border-t border-neutral-200/80 py-16 md:py-20">
+      <section
+        id="about"
+        className="scroll-mt-24 border-t border-neutral-200/80 py-16 md:py-20"
+      >
         <BlurFade delay={DELAY}>
           <div className="grid gap-8 md:grid-cols-[200px_1fr] md:gap-16">
             <h2 className="text-sm font-medium tracking-[0.18em] text-neutral-400 uppercase">
@@ -67,8 +72,11 @@ export default function Page() {
         </BlurFade>
       </section>
 
-      {/* Work */}
-      <section id="experience" className="scroll-mt-24 border-t border-neutral-200/80 py-16 md:py-20">
+      {/* Experience */}
+      <section
+        id="experience"
+        className="scroll-mt-24 border-t border-neutral-200/80 py-16 md:py-20"
+      >
         <BlurFade delay={DELAY}>
           <div className="grid gap-10 md:grid-cols-[200px_1fr] md:gap-16">
             <h2 className="text-sm font-medium tracking-[0.18em] text-neutral-400 uppercase">
@@ -81,17 +89,33 @@ export default function Page() {
                   href={work.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex flex-col gap-1 py-6 first:pt-0 last:pb-0 sm:flex-row sm:items-baseline sm:justify-between sm:gap-8"
+                  className="group flex gap-4 py-6 first:pt-0 last:pb-0 sm:gap-5"
                 >
-                  <div>
-                    <p className="text-lg font-medium tracking-tight text-neutral-950 transition group-hover:opacity-60">
-                      {work.company}
-                    </p>
-                    <p className="text-sm text-neutral-500">{work.title}</p>
+                  <div className="relative size-12 shrink-0 overflow-hidden rounded-xl border border-neutral-200 bg-white sm:size-14">
+                    <Image
+                      src={work.logoUrl}
+                      alt={work.company}
+                      fill
+                      sizes="56px"
+                      className="object-cover"
+                    />
                   </div>
-                  <p className="shrink-0 text-sm text-neutral-400">
-                    {work.start} — {work.end ?? "Present"}
-                  </p>
+                  <div className="min-w-0 flex-1">
+                    <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6">
+                      <div>
+                        <p className="text-lg font-medium tracking-tight text-neutral-950 transition group-hover:opacity-60">
+                          {work.company}
+                        </p>
+                        <p className="text-sm text-neutral-500">{work.title}</p>
+                      </div>
+                      <p className="shrink-0 text-sm text-neutral-400">
+                        {work.start} — {work.end ?? "Present"}
+                      </p>
+                    </div>
+                    <p className="mt-2 max-w-xl text-sm leading-relaxed text-neutral-500">
+                      {work.description}
+                    </p>
+                  </div>
                 </Link>
               ))}
             </div>
@@ -99,10 +123,13 @@ export default function Page() {
         </BlurFade>
       </section>
 
-      {/* Projects — staggered */}
-      <section id="projects" className="scroll-mt-24 border-t border-neutral-200/80 py-16 md:py-24">
+      {/* Projects */}
+      <section
+        id="projects"
+        className="scroll-mt-24 border-t border-neutral-200/80 py-16 md:py-24"
+      >
         <BlurFade delay={DELAY}>
-          <div className="mb-14 max-w-xl md:mb-20">
+          <div className="mb-12 max-w-xl md:mb-16">
             <h2 className="text-sm font-medium tracking-[0.18em] text-neutral-400 uppercase">
               Selected work
             </h2>
@@ -112,7 +139,7 @@ export default function Page() {
           </div>
         </BlurFade>
 
-        <div className="flex flex-col gap-16 md:gap-24">
+        <div className="flex flex-col gap-12 md:gap-16">
           {DATA.projects.map((project, id) => (
             <BlurFade key={project.title} delay={DELAY + id * 0.04}>
               <ProjectCard
@@ -132,13 +159,36 @@ export default function Page() {
       {/* Skills */}
       <section className="border-t border-neutral-200/80 py-16 md:py-20">
         <BlurFade delay={DELAY}>
-          <div className="grid gap-8 md:grid-cols-[200px_1fr] md:gap-16">
+          <div className="grid gap-10 md:grid-cols-[200px_1fr] md:gap-16">
             <h2 className="text-sm font-medium tracking-[0.18em] text-neutral-400 uppercase">
               Skills
             </h2>
-            <p className="max-w-2xl text-base leading-relaxed text-neutral-600 sm:text-lg">
-              {DATA.skills.join("  ·  ")}
-            </p>
+            <div className="space-y-8">
+              {(
+                [
+                  ["Development", DATA.skills.development],
+                  ["DevOps", DATA.skills.devops],
+                  ["Soft skills", DATA.skills.soft],
+                ] as const
+              ).map(([label, items]) => (
+                <div key={label}>
+                  <p className="mb-3 text-xs font-medium tracking-wide text-neutral-400 uppercase">
+                    {label}
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {items.map((skill) => (
+                      <Badge
+                        key={skill}
+                        variant="secondary"
+                        className="rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs font-normal text-neutral-700 shadow-none"
+                      >
+                        {skill}
+                      </Badge>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </BlurFade>
       </section>
@@ -198,9 +248,7 @@ export default function Page() {
         </BlurFade>
       </section>
 
-      <footer className="border-t border-neutral-200/80 pt-8 text-sm text-neutral-400">
-        © {new Date().getFullYear()} {DATA.name}
-      </footer>
+      <SiteFooter />
     </main>
   )
 }

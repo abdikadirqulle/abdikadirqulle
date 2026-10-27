@@ -54,6 +54,38 @@
   }
 }
 
+/* Dotted footer name — inspired by pixel-mark branding */
+.footer-name {
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.footer-name-accent {
+  background-image: radial-gradient(
+    circle at center,
+    #3b5bdb 0.11em,
+    transparent 0.12em
+  );
+  background-size: 0.26em 0.26em;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.footer-name-rest {
+  background-image: radial-gradient(
+    circle at center,
+    #525252 0.11em,
+    transparent 0.12em
+  );
+  background-size: 0.26em 0.26em;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
 h3 code {
   @apply !text-lg md:!text-xl;
 }

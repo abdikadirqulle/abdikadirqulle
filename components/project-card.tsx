@@ -39,7 +39,7 @@ export function ProjectCard({
   return (
     <article
       className={cn(
-        "group w-full md:w-[78%] lg:w-[70%]",
+        "group w-full md:w-[58%] lg:w-[52%]",
         align === "right" && "md:ml-auto",
         className
       )}
@@ -48,30 +48,30 @@ export function ProjectCard({
         href={primaryHref}
         target="_blank"
         rel="noopener noreferrer"
-        className="block overflow-hidden rounded-2xl bg-white shadow-[0_1px_2px_rgba(0,0,0,0.04),0_12px_40px_rgba(0,0,0,0.06)] ring-1 ring-black/[0.04] transition duration-500 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)]"
+        className="block overflow-hidden rounded-xl bg-white shadow-[0_1px_2px_rgba(0,0,0,0.04),0_8px_24px_rgba(0,0,0,0.05)] ring-1 ring-black/[0.04] transition duration-500 hover:-translate-y-0.5 hover:shadow-[0_12px_32px_rgba(0,0,0,0.07)]"
       >
         {image && (
-          <div className="relative aspect-[16/10] overflow-hidden bg-neutral-100">
+          <div className="relative aspect-[16/9] overflow-hidden bg-neutral-100">
             <Image
               src={image}
               alt={title}
               fill
-              sizes="(max-width: 768px) 100vw, 70vw"
-              className="object-cover object-top transition duration-700 group-hover:scale-[1.03]"
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover object-top transition duration-700 group-hover:scale-[1.02]"
             />
           </div>
         )}
       </Link>
 
-      <div className="mt-5 flex flex-col gap-2 px-1 sm:flex-row sm:items-end sm:justify-between">
-        <div className="max-w-lg space-y-1.5">
+      <div className="mt-4 flex flex-col gap-2 px-0.5 sm:flex-row sm:items-end sm:justify-between">
+        <div className="max-w-md space-y-1">
           <div className="flex items-baseline gap-3">
-            <h3 className="text-xl font-semibold tracking-tight text-neutral-950 sm:text-2xl">
+            <h3 className="text-lg font-semibold tracking-tight text-neutral-950 sm:text-xl">
               {title}
             </h3>
             <span className="text-xs text-neutral-400">{dates}</span>
           </div>
-          <p className="text-[15px] leading-relaxed text-neutral-500">
+          <p className="text-sm leading-relaxed text-neutral-500">
             {description}
           </p>
         </div>
