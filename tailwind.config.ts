@@ -18,12 +18,24 @@ const config = {
   		}
   	},
   	extend: {
-  		fontFamily: {
-  			sans: [
-  				'var(--font-sans)',
-                    ...fontFamily.sans
-                ]
-  		},
+		fontFamily: {
+			sans: [
+				'var(--font-sans)',
+				...fontFamily.sans
+			],
+			ict: [
+				'var(--font-ict)',
+				...fontFamily.sans
+			],
+			'public-sans': [
+				'var(--font-public-sans)',
+				...fontFamily.sans
+			],
+			'public-serif': [
+				'var(--font-public-serif)',
+				...fontFamily.serif
+			],
+		},
   		colors: {
   			border: 'hsl(var(--border))',
   			input: 'hsl(var(--input))',

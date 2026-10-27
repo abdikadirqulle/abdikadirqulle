@@ -1,10 +1,15 @@
-import Navbar from "@/components/navbar"
-import { SiteFooter } from "@/components/site-footer"
-import { DATA } from "@/data/resume"
+import { PortfolioShell } from "@/components/portfolio-shell"
+import { resolvePortfolio } from "@/lib/portfolio"
 import { cn } from "@/lib/utils"
 import { Analytics } from "@vercel/analytics/react"
 import type { Metadata } from "next"
-import { Geist } from "next/font/google"
+import {
+  Geist,
+  IBM_Plex_Sans,
+  Source_Sans_3,
+  Source_Serif_4,
+} from "next/font/google"
+import { headers } from "next/headers"
 import "./globals.css"
 
 const geistSans = Geist({
@@ -12,24 +17,26 @@ const geistSans = Geist({
   variable: "--font-sans",
 })
 
+const ibmPlexSans = IBM_Plex_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-ict",
+})
+
+const sourceSans = Source_Sans_3({
+  subsets: ["latin"],
+  variable: "--font-public-sans",
+})
+
+const sourceSerif = Source_Serif_4({
+  subsets: ["latin"],
+  variable: "--font-public-serif",
+})
+
 export const metadata: Metadata = {
-  metadataBase: new URL(DATA.url),
-  title: {
-    default: DATA.name,
-    template: `%s | ${DATA.name}`,
-  },
-  description: DATA.description,
   icons: {
     icon: "/icon.png",
     apple: "/apple-icon.png",
-  },
-  openGraph: {
-    title: DATA.name,
-    description: DATA.description,
-    url: DATA.url,
-    siteName: DATA.name,
-    locale: "en_US",
-    type: "website",
   },
   robots: {
     index: true,
@@ -42,30 +49,41 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  twitter: {
-    title: DATA.name,
-    card: "summary_large_image",
-  },
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const headerStore = await headers()
+  const portfolio = resolvePortfolio({
+    host: headerStore.get("host"),
+    headerPortfolio: headerStore.get("x-portfolio"),
+  })
+
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      data-portfolio={portfolio}
+      className={cn(
+        geistSans.variable,
+        ibmPlexSans.variable,
+        sourceSans.variable,
+        sourceSerif.variable
+      )}
+    >
       <body
         className={cn(
-          "min-h-screen bg-[#fafafa] font-sans text-neutral-950 antialiased",
-          geistSans.variable
+          "min-h-screen antialiased",
+          portfolio === "se" && "bg-[#fafafa] font-sans text-neutral-950",
+          portfolio === "ict" &&
+            "bg-slate-50 font-[family-name:var(--font-ict)] text-slate-900",
+          portfolio === "public" &&
+            "bg-[#f7f5f0] font-[family-name:var(--font-public-sans)] text-slate-900"
         )}
       >
-        <Navbar />
-        <div className="mx-auto max-w-6xl px-6 pb-8 pt-10 sm:px-8 sm:pt-14">
-          {children}
-        </div>
-        <SiteFooter />
+        <PortfolioShell portfolio={portfolio}>{children}</PortfolioShell>
         <Analytics />
       </body>
     </html>
