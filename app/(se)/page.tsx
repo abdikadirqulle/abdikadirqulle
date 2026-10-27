@@ -62,8 +62,8 @@ export default function Page() {
         <BlurFade delay={DELAY}>
           <div className="grid grid-cols-3 gap-6">
             {[
-              { value: "10+", label: "Products & client builds" },
-              { value: "3", label: "Companies founded" },
+              { value: "20+", label: "Products & client builds" },
+              { value: "5+", label: "Companies founded" },
               { value: "2021", label: "Building since" },
             ].map((stat) => (
               <div key={stat.label}>
