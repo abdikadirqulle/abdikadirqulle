@@ -1,5 +1,5 @@
 import BlurFade from "@/components/magicui/blur-fade"
-import { ProjectCard } from "@/components/project-card"
+import { ProjectsGrid } from "@/components/projects-grid"
 import { Badge } from "@/components/ui/badge"
 import { DATA } from "@/data/resume"
 import Image from "next/image"
@@ -138,20 +138,9 @@ export default function Page() {
           </div>
         </BlurFade>
 
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-12">
-          {DATA.projects.map((project, id) => (
-            <BlurFade key={project.title} delay={DELAY + id * 0.04}>
-              <ProjectCard
-                href={project.href}
-                title={project.title}
-                description={project.description}
-                dates={project.dates}
-                image={project.image}
-                links={project.links}
-              />
-            </BlurFade>
-          ))}
-        </div>
+        <BlurFade delay={DELAY}>
+          <ProjectsGrid projects={DATA.projects} />
+        </BlurFade>
       </section>
 
       {/* Skills */}
