@@ -115,7 +115,7 @@ export const DATA = {
     },
     {
       company: "MaragCloud",
-      href: "https://casritek.vercel.app/work/maragcloud",
+      href: "https://maragcloud.vercel.app/",
       badges: [],
       location: "Somalia",
       title: "Founder",
@@ -167,7 +167,7 @@ export const DATA = {
     },
     {
       title: "MaragCloud",
-      href: "https://casritek.vercel.app/work/maragcloud",
+      href: "https://maragcloud.vercel.app/",
       dates: "2025",
       active: true,
       description:
@@ -175,7 +175,7 @@ export const DATA = {
       links: [
         {
           type: "Preview",
-          href: "https://casritek.vercel.app/work/maragcloud",
+          href: "https://maragcloud.vercel.app/",
         },
       ],
       image: "/projects/maragcloud.jpg",
@@ -215,7 +215,7 @@ export const DATA = {
     },
     {
       title: "Noya SPA",
-      href: "https://casritek.vercel.app/work/noya-spa",
+      href: "http://noyaspa.so/",
       dates: "2025",
       active: true,
       description:
@@ -223,7 +223,7 @@ export const DATA = {
       links: [
         {
           type: "Preview",
-          href: "https://casritek.vercel.app/work/noya-spa",
+          href: "http://noyaspa.so/",
         },
       ],
       image: "/projects/noya-spa.jpg",
@@ -263,7 +263,7 @@ export const DATA = {
     },
     {
       title: "Agan Place Hotel",
-      href: "https://casritek.vercel.app/work/agan-hotel",
+      href: "https://agan-hotel.vercel.app/",
       dates: "2025",
       active: true,
       description:
@@ -271,7 +271,7 @@ export const DATA = {
       links: [
         {
           type: "Preview",
-          href: "https://casritek.vercel.app/work/agan-hotel",
+          href: "https://agan-hotel.vercel.app/",
         },
       ],
       image: "/projects/agan-hotel.jpg",
