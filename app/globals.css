@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 0 0% 98%;
     --foreground: 0 0% 9%;
 
     --card: 0 0% 100%;
@@ -32,7 +32,7 @@
     --input: 0 0% 90%;
     --ring: 0 0% 9%;
 
-    --radius: 0.75rem;
+    --radius: 1rem;
   }
 }
 
@@ -41,8 +41,16 @@
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-background text-foreground antialiased;
+    @apply bg-[#fafafa] text-foreground antialiased;
+  }
+
+  ::selection {
+    background: rgba(0, 0, 0, 0.08);
   }
 }
 

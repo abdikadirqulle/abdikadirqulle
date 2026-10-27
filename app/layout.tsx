@@ -1,20 +1,14 @@
 import Navbar from "@/components/navbar"
-import { TooltipProvider } from "@/components/ui/tooltip"
 import { DATA } from "@/data/resume"
 import { cn } from "@/lib/utils"
 import { Analytics } from "@vercel/analytics/react"
 import type { Metadata } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
+import { Geist } from "next/font/google"
 import "./globals.css"
 
 const geistSans = Geist({
   subsets: ["latin"],
   variable: "--font-sans",
-})
-
-const geistMono = Geist_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
 })
 
 export const metadata: Metadata = {
@@ -24,6 +18,10 @@ export const metadata: Metadata = {
     template: `%s | ${DATA.name}`,
   },
   description: DATA.description,
+  icons: {
+    icon: "/icon.png",
+    apple: "/apple-icon.png",
+  },
   openGraph: {
     title: DATA.name,
     description: DATA.description,
@@ -58,18 +56,15 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "min-h-screen bg-white font-sans text-foreground antialiased",
-          geistSans.variable,
-          geistMono.variable
+          "min-h-screen bg-[#fafafa] font-sans text-neutral-950 antialiased",
+          geistSans.variable
         )}
       >
-        <TooltipProvider delayDuration={0}>
-          <div className="mx-auto min-h-screen max-w-2xl px-6 pb-28 pt-12 sm:pb-32 sm:pt-24">
-            {children}
-            <Analytics />
-            <Navbar />
-          </div>
-        </TooltipProvider>
+        <Navbar />
+        <div className="mx-auto max-w-6xl px-6 pb-24 pt-10 sm:px-8 sm:pt-14">
+          {children}
+        </div>
+        <Analytics />
       </body>
     </html>
   )

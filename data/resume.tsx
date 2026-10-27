@@ -1,5 +1,4 @@
 import { Icons } from "@/components/icons"
-import { HomeIcon, NotebookIcon } from "lucide-react"
 
 export const DATA = {
   name: "Abdikadir Qulle",
@@ -23,10 +22,6 @@ export const DATA = {
     "Docker",
     "Prisma",
     "Tailwind CSS",
-  ],
-  navbar: [
-    { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "/blog", icon: NotebookIcon, label: "Blog" },
   ],
   contact: {
     email: "abdikadirqulle@gmail.com",
@@ -54,7 +49,7 @@ export const DATA = {
         name: "Youtube",
         url: "https://youtube.com/abdikadirqulle",
         icon: Icons.youtube,
-        navbar: true,
+        navbar: false,
       },
       email: {
         name: "Send Email",
@@ -75,7 +70,7 @@ export const DATA = {
       start: "Nov 2024",
       end: "Present",
       description:
-        "Digital and software agency building websites, custom systems, and digital platforms for businesses, NGOs, and public institutions. Lead discovery, design, engineering, and post-launch support end to end.",
+        "Digital and software agency building websites, custom systems, and digital platforms for businesses, NGOs, and public institutions.",
     },
     {
       company: "E-xisaabi",
@@ -87,7 +82,7 @@ export const DATA = {
       start: "March 2024",
       end: "Present",
       description:
-        "Co-founded financial management software for small businesses. Led product development, core accounting features, UX, and client onboarding.",
+        "Co-founded financial management software for small businesses.",
     },
     {
       company: "e-safar",
@@ -99,7 +94,7 @@ export const DATA = {
       start: "July 2024",
       end: "Sept 2024",
       description:
-        "Digital ticketing platform for public transport. Built backend APIs, payment integrations, and analytics for operators and passengers.",
+        "Digital ticketing platform for public transport.",
     },
   ],
   education: [
@@ -120,12 +115,10 @@ export const DATA = {
       active: true,
       description:
         "Website and business platform for a plastics supply company — public storefront out front, accounting and stock system behind it.",
-      technologies: ["Next.js", "TypeScript", "PostgreSQL", "Tailwind CSS"],
       links: [
         {
-          type: "Case study",
+          type: "Preview",
           href: "https://casritek.vercel.app/work/blue-plastic",
-          icon: <Icons.globe className="size-3" />,
         },
       ],
       image: "/projects/blue-plastic.jpg",
@@ -138,12 +131,10 @@ export const DATA = {
       active: true,
       description:
         "Business website for a Kismayo wholesale supplier of plumbing, building materials, and construction supplies.",
-      technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
       links: [
         {
-          type: "Case study",
+          type: "Preview",
           href: "https://casritek.vercel.app/work/bbs-company",
-          icon: <Icons.globe className="size-3" />,
         },
       ],
       image: "/projects/bbc-materials.jpg",
@@ -156,12 +147,10 @@ export const DATA = {
       active: true,
       description:
         "Hospitality website covering rooms, events, and enquiries, with booking as the primary call to action.",
-      technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
       links: [
         {
-          type: "Case study",
+          type: "Preview",
           href: "https://casritek.vercel.app/work/agan-hotel",
-          icon: <Icons.globe className="size-3" />,
         },
       ],
       image: "/projects/agan-hotel.jpg",
@@ -174,12 +163,10 @@ export const DATA = {
       active: true,
       description:
         "Bilingual booking website for a Mogadishu beauty and wellness studio, built around appointments and WhatsApp enquiries.",
-      technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
       links: [
         {
-          type: "Case study",
+          type: "Preview",
           href: "https://casritek.vercel.app/work/noya-spa",
-          icon: <Icons.globe className="size-3" />,
         },
       ],
       image: "/projects/noya-spa.jpg",
@@ -192,12 +179,10 @@ export const DATA = {
       active: true,
       description:
         "Annual Planning and Activities Management System — digital MIS supporting institutional planning and activity tracking.",
-      technologies: ["Next.js", "TypeScript", "PostgreSQL", "Prisma"],
       links: [
         {
-          type: "Case study",
+          type: "Preview",
           href: "https://casritek.vercel.app/work/apams",
-          icon: <Icons.globe className="size-3" />,
         },
       ],
       image: "/projects/apams.jpg",
@@ -210,12 +195,10 @@ export const DATA = {
       active: true,
       description:
         "Notary management system that digitises and organises notary office operations.",
-      technologies: ["Next.js", "TypeScript", "PostgreSQL", "Prisma"],
       links: [
         {
-          type: "Case study",
+          type: "Preview",
           href: "https://casritek.vercel.app/work/maragcloud",
-          icon: <Icons.globe className="size-3" />,
         },
       ],
       image: "/projects/maragcloud.jpg",
@@ -227,18 +210,11 @@ export const DATA = {
       dates: "2024 – Present",
       active: true,
       description:
-        "Agency site for Casritek — ICT solutions, software, and digital services. Built with Next.js and a calm, conversion-focused layout.",
-      technologies: [
-        "Next.js",
-        "TypeScript",
-        "Tailwind CSS",
-        "Framer Motion",
-      ],
+        "Agency site for Casritek — ICT solutions, software, and digital services with a calm, conversion-focused layout.",
       links: [
         {
-          type: "Website",
+          type: "Preview",
           href: "https://casritek.vercel.app",
-          icon: <Icons.globe className="size-3" />,
         },
       ],
       image: "/projects/casritek.png",
@@ -251,19 +227,10 @@ export const DATA = {
       active: true,
       description:
         "Flight booking platform streamlining travel planning with secure payments and a clean booking flow.",
-      technologies: [
-        "Next.js",
-        "TypeScript",
-        "MongoDB",
-        "Prisma",
-        "Redux",
-        "Tailwind CSS",
-      ],
       links: [
         {
-          type: "Website",
+          type: "Preview",
           href: "https://esafar.vercel.app",
-          icon: <Icons.globe className="size-3" />,
         },
       ],
       image: "/projects/esafar.png",

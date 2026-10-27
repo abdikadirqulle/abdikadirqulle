@@ -2,6 +2,7 @@ import { getBlogPosts, getPost } from "@/data/blog"
 import { DATA } from "@/data/resume"
 import { formatDate } from "@/lib/utils"
 import type { Metadata } from "next"
+import Link from "next/link"
 import { notFound } from "next/navigation"
 import { Suspense } from "react"
 
@@ -61,7 +62,7 @@ export default async function Blog({
   }
 
   return (
-    <section id="blog" className="pb-8">
+    <article className="mx-auto max-w-2xl pb-8 pt-4">
       <script
         type="application/ld+json"
         suppressHydrationWarning
@@ -84,20 +85,26 @@ export default async function Blog({
           }),
         }}
       />
-      <h1 className="max-w-[650px] text-3xl font-semibold tracking-tight text-neutral-950">
+      <Link
+        href="/blog"
+        className="text-sm text-neutral-400 transition hover:text-neutral-900"
+      >
+        ← Blog
+      </Link>
+      <h1 className="mt-6 text-3xl font-semibold tracking-tight text-neutral-950 sm:text-4xl">
         {post.metadata.title}
       </h1>
-      <div className="mb-10 mt-3 flex max-w-[650px] items-center justify-between text-sm">
+      <div className="mb-10 mt-3">
         <Suspense fallback={<p className="h-5" />}>
           <p className="text-sm text-neutral-500">
             {formatDate(post.metadata.publishedAt)}
           </p>
         </Suspense>
       </div>
-      <article
-        className="prose prose-neutral max-w-[650px] prose-headings:font-semibold prose-headings:tracking-tight prose-a:text-neutral-900 prose-pre:bg-neutral-50"
+      <div
+        className="prose prose-neutral max-w-none prose-headings:font-semibold prose-headings:tracking-tight prose-a:text-neutral-900 prose-pre:bg-neutral-100"
         dangerouslySetInnerHTML={{ __html: post.source }}
       />
-    </section>
+    </article>
   )
 }
