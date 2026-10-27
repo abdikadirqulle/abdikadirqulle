@@ -48,7 +48,12 @@ export const DATA = {
     ],
   },
   contact: {
+    /** Primary inbox for CTAs (Start a project, mailto buttons). */
     email: "abdikadirqulle@gmail.com",
+    emails: [
+      "abdikadirqulle@gmail.com",
+      "hello@abdikadirqulle.com",
+    ],
     tel: "+252 61 7797802",
     social: {
       GitHub: {
@@ -145,6 +150,86 @@ export const DATA = {
   ],
   projects: [
     {
+      title: "E-xisaabi",
+      href: "https://exisaabi.app",
+      dates: "2024 – Present",
+      active: true,
+      description:
+        "Financial management software for small businesses — accounting, bookkeeping, and clearer day-to-day money operations.",
+      links: [
+        {
+          type: "Preview",
+          href: "https://exisaabi.app",
+        },
+      ],
+      image: "/projects/exisaabi-cover.jpg",
+      video: "",
+    },
+    {
+      title: "MaragCloud",
+      href: "https://casritek.vercel.app/work/maragcloud",
+      dates: "2025",
+      active: true,
+      description:
+        "Notary management system that digitises and organises notary office operations.",
+      links: [
+        {
+          type: "Preview",
+          href: "https://casritek.vercel.app/work/maragcloud",
+        },
+      ],
+      image: "/projects/maragcloud.jpg",
+      video: "",
+    },
+    {
+      title: "Annual Planning and Activities Management System",
+      href: "https://casritek.vercel.app/work/apams",
+      dates: "2025",
+      active: true,
+      description:
+        "APAMS — a digital management information system supporting institutional annual planning and activity tracking.",
+      links: [
+        {
+          type: "Preview",
+          href: "https://casritek.vercel.app/work/apams",
+        },
+      ],
+      image: "/projects/apams.jpg",
+      video: "",
+    },
+    {
+      title: "Casritek",
+      href: "https://casritek.vercel.app",
+      dates: "2024 – Present",
+      active: true,
+      description:
+        "Agency site for Casritek — ICT solutions, software, and digital services with a calm, conversion-focused layout.",
+      links: [
+        {
+          type: "Preview",
+          href: "https://casritek.vercel.app",
+        },
+      ],
+      image: "/projects/casritek.png",
+      video: "",
+    },
+    {
+      title: "Noya SPA",
+      href: "https://casritek.vercel.app/work/noya-spa",
+      dates: "2025",
+      active: true,
+      description:
+        "Bilingual booking website for a Mogadishu beauty and wellness studio, built around appointments and WhatsApp enquiries.",
+      links: [
+        {
+          type: "Preview",
+          href: "https://casritek.vercel.app/work/noya-spa",
+        },
+      ],
+      image: "/projects/noya-spa.jpg",
+      video: "",
+    },
+    {
       title: "Blue Plastic Center",
       href: "https://casritek.vercel.app/work/blue-plastic",
       dates: "2025",
@@ -190,70 +275,6 @@ export const DATA = {
         },
       ],
       image: "/projects/agan-hotel.jpg",
-      video: "",
-    },
-    {
-      title: "Noya SPA",
-      href: "https://casritek.vercel.app/work/noya-spa",
-      dates: "2025",
-      active: true,
-      description:
-        "Bilingual booking website for a Mogadishu beauty and wellness studio, built around appointments and WhatsApp enquiries.",
-      links: [
-        {
-          type: "Preview",
-          href: "https://casritek.vercel.app/work/noya-spa",
-        },
-      ],
-      image: "/projects/noya-spa.jpg",
-      video: "",
-    },
-    {
-      title: "APAMS",
-      href: "https://casritek.vercel.app/work/apams",
-      dates: "2025",
-      active: true,
-      description:
-        "Annual Planning and Activities Management System — digital MIS supporting institutional planning and activity tracking.",
-      links: [
-        {
-          type: "Preview",
-          href: "https://casritek.vercel.app/work/apams",
-        },
-      ],
-      image: "/projects/apams.jpg",
-      video: "",
-    },
-    {
-      title: "MaragCloud",
-      href: "https://casritek.vercel.app/work/maragcloud",
-      dates: "2025",
-      active: true,
-      description:
-        "Notary management system that digitises and organises notary office operations.",
-      links: [
-        {
-          type: "Preview",
-          href: "https://casritek.vercel.app/work/maragcloud",
-        },
-      ],
-      image: "/projects/maragcloud.jpg",
-      video: "",
-    },
-    {
-      title: "Casritek",
-      href: "https://casritek.vercel.app",
-      dates: "2024 – Present",
-      active: true,
-      description:
-        "Agency site for Casritek — ICT solutions, software, and digital services with a calm, conversion-focused layout.",
-      links: [
-        {
-          type: "Preview",
-          href: "https://casritek.vercel.app",
-        },
-      ],
-      image: "/projects/casritek.png",
       video: "",
     },
     {

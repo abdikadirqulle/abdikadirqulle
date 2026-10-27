@@ -51,13 +51,13 @@ export function ProjectCard({
         className="block overflow-hidden rounded-xl bg-white shadow-[0_1px_2px_rgba(0,0,0,0.04),0_8px_24px_rgba(0,0,0,0.05)] ring-1 ring-black/[0.04] transition duration-500 hover:-translate-y-0.5 hover:shadow-[0_12px_32px_rgba(0,0,0,0.07)]"
       >
         {image && (
-          <div className="relative aspect-[16/9] overflow-hidden bg-neutral-100">
+          <div className="relative aspect-[16/10] overflow-hidden bg-neutral-100">
             <Image
               src={image}
               alt={title}
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover object-top transition duration-700 group-hover:scale-[1.02]"
+              className="object-cover object-center transition duration-700 group-hover:scale-[1.02]"
             />
           </div>
         )}
