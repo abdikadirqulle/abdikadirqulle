@@ -1,43 +1,28 @@
-<div align="center">
-<img alt="Portfolio" src="https://github.com/user-attachments/assets/bbed321c-445e-410c-9187-570b2038233c" width="90%">
-</div>
+# Abdikadir Qulle — Portfolio
 
-# Portfolio [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fdillionverma%2Fportfolio)
+Personal site at [abdikadirqulle.com](https://abdikadirqulle.com).
 
-Built with next.js, [shadcn/ui](https://ui.shadcn.com/), and [magic ui](https://magicui.design/), deployed on Vercel.
+## Stack
 
-# Features
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- MDX blog (`content/`)
 
-- Setup only takes a few minutes by editing the [single config file](./src/data/resume.tsx)
-- Built using Next.js 14, React, Typescript, Shadcn/UI, TailwindCSS, Framer Motion, Magic UI
-- Includes a blog
-- Responsive for different devices
-- Optimized for Next.js and Vercel
+## Develop
 
-# Getting Started Locally
+```bash
+pnpm install
+pnpm dev
+```
 
-1. Clone this repository to your local machine:
+## Content
 
-   ```bash
-   git clone https://github.com/abdikadirqulle/abdikadirqulle.com
-   ```
+- Site copy and projects: [`data/resume.tsx`](data/resume.tsx)
+- Blog posts: add an `.mdx` file under [`content/`](content/) with `title`, `publishedAt`, and `summary` frontmatter
 
-2. Move to the cloned directory
+## Deploy
 
-   ```bash
-   cd portfolio
-   ```
-
-3. Install dependencies:
-
-   ```bash
-   npm install
-   ```
-
-4. Start the local Server:
-
-   ```bash
-   npm dev
-   ```
-
-5. Open the [Config file](./src/data/resume.tsx) and make changes
+Push to Vercel and point `abdikadirqulle.com` at the project.
