@@ -138,7 +138,7 @@ export default function Page() {
           </div>
         </BlurFade>
 
-        <div className="flex flex-col gap-12 md:gap-16">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-12">
           {DATA.projects.map((project, id) => (
             <BlurFade key={project.title} delay={DELAY + id * 0.04}>
               <ProjectCard
@@ -148,7 +148,6 @@ export default function Page() {
                 dates={project.dates}
                 image={project.image}
                 links={project.links}
-                align={id % 2 === 0 ? "left" : "right"}
               />
             </BlurFade>
           ))}

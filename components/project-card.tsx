@@ -13,7 +13,6 @@ interface Props {
     type: string
     href: string
   }[]
-  align?: "left" | "right"
   className?: string
 }
 
@@ -24,7 +23,6 @@ export function ProjectCard({
   dates,
   image,
   links,
-  align = "left",
   className,
 }: Props) {
   const preview = links?.find(
@@ -37,13 +35,7 @@ export function ProjectCard({
   const primaryHref = preview?.href || href || "#"
 
   return (
-    <article
-      className={cn(
-        "group w-full md:w-[58%] lg:w-[52%]",
-        align === "right" && "md:ml-auto",
-        className
-      )}
-    >
+    <article className={cn("group flex h-full w-full flex-col", className)}>
       <Link
         href={primaryHref}
         target="_blank"
@@ -63,10 +55,10 @@ export function ProjectCard({
         )}
       </Link>
 
-      <div className="mt-4 flex flex-col gap-2 px-0.5 sm:flex-row sm:items-end sm:justify-between">
-        <div className="max-w-md space-y-1">
-          <div className="flex items-baseline gap-3">
-            <h3 className="text-lg font-semibold tracking-tight text-neutral-950 sm:text-xl">
+      <div className="mt-4 flex flex-1 flex-col gap-3 px-0.5">
+        <div className="space-y-1">
+          <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+            <h3 className="text-lg font-semibold tracking-tight text-neutral-950">
               {title}
             </h3>
             <span className="text-xs text-neutral-400">{dates}</span>
@@ -76,7 +68,7 @@ export function ProjectCard({
           </p>
         </div>
 
-        <div className="flex shrink-0 items-center gap-3 pt-1 sm:pt-0">
+        <div className="mt-auto flex items-center gap-3">
           {preview && (
             <Link
               href={preview.href}
