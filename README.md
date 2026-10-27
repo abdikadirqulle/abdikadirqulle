@@ -1,6 +1,6 @@
 # Hi, I'm Abdikadir Qulle
 
-**Full-stack engineer & founder · Based in Somalia**
+**Full-stack Software engineer & founder · Based in Somalia**
 
 I design and build websites, software, and systems that help organisations work better — from client-facing sites to the tools that run behind them.
 
