@@ -115,7 +115,7 @@ export const DATA = {
   projects: [
     {
       title: "Blue Plastic Center",
-      href: "https://casritek.vercel.app",
+      href: "https://casritek.vercel.app/work/blue-plastic",
       dates: "2025",
       active: true,
       description:
@@ -123,17 +123,17 @@ export const DATA = {
       technologies: ["Next.js", "TypeScript", "PostgreSQL", "Tailwind CSS"],
       links: [
         {
-          type: "Agency",
-          href: "https://casritek.vercel.app",
+          type: "Case study",
+          href: "https://casritek.vercel.app/work/blue-plastic",
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "/projects/casritek.png",
+      image: "/projects/blue-plastic.jpg",
       video: "",
     },
     {
       title: "BBC Materials",
-      href: "https://casritek.vercel.app",
+      href: "https://casritek.vercel.app/work/bbs-company",
       dates: "2025",
       active: true,
       description:
@@ -141,17 +141,17 @@ export const DATA = {
       technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
       links: [
         {
-          type: "Agency",
-          href: "https://casritek.vercel.app",
+          type: "Case study",
+          href: "https://casritek.vercel.app/work/bbs-company",
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "/projects/casritek.png",
+      image: "/projects/bbc-materials.jpg",
       video: "",
     },
     {
       title: "Agan Place Hotel",
-      href: "https://casritek.vercel.app",
+      href: "https://casritek.vercel.app/work/agan-hotel",
       dates: "2025",
       active: true,
       description:
@@ -159,17 +159,17 @@ export const DATA = {
       technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
       links: [
         {
-          type: "Agency",
-          href: "https://casritek.vercel.app",
+          type: "Case study",
+          href: "https://casritek.vercel.app/work/agan-hotel",
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "/projects/casritek.png",
+      image: "/projects/agan-hotel.jpg",
       video: "",
     },
     {
       title: "Noya SPA",
-      href: "https://casritek.vercel.app",
+      href: "https://casritek.vercel.app/work/noya-spa",
       dates: "2025",
       active: true,
       description:
@@ -177,17 +177,17 @@ export const DATA = {
       technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
       links: [
         {
-          type: "Agency",
-          href: "https://casritek.vercel.app",
+          type: "Case study",
+          href: "https://casritek.vercel.app/work/noya-spa",
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "/projects/casritek.png",
+      image: "/projects/noya-spa.jpg",
       video: "",
     },
     {
       title: "APAMS",
-      href: "https://casritek.vercel.app",
+      href: "https://casritek.vercel.app/work/apams",
       dates: "2025",
       active: true,
       description:
@@ -195,17 +195,17 @@ export const DATA = {
       technologies: ["Next.js", "TypeScript", "PostgreSQL", "Prisma"],
       links: [
         {
-          type: "Agency",
-          href: "https://casritek.vercel.app",
+          type: "Case study",
+          href: "https://casritek.vercel.app/work/apams",
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "/projects/staff-manager.png",
+      image: "/projects/apams.jpg",
       video: "",
     },
     {
       title: "MaragCloud",
-      href: "https://casritek.vercel.app",
+      href: "https://casritek.vercel.app/work/maragcloud",
       dates: "2025",
       active: true,
       description:
@@ -213,12 +213,12 @@ export const DATA = {
       technologies: ["Next.js", "TypeScript", "PostgreSQL", "Prisma"],
       links: [
         {
-          type: "Agency",
-          href: "https://casritek.vercel.app",
+          type: "Case study",
+          href: "https://casritek.vercel.app/work/maragcloud",
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "/projects/hosbital-m-system.png",
+      image: "/projects/maragcloud.jpg",
       video: "",
     },
     {
@@ -245,30 +245,6 @@ export const DATA = {
       video: "",
     },
     {
-      title: "Staff Manager",
-      href: "https://github.com/abdikadirqulle/hotel-staff-management",
-      dates: "2024 – 2025",
-      active: true,
-      description:
-        "Hotel staff management for schedules, attendance, and performance — role-based access and real-time updates.",
-      technologies: [
-        "Next.js",
-        "TypeScript",
-        "PostgreSQL",
-        "Prisma",
-        "Tailwind CSS",
-      ],
-      links: [
-        {
-          type: "Source",
-          href: "https://github.com/abdikadirqulle/hotel-staff-management",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "/projects/staff-manager.png",
-      video: "",
-    },
-    {
       title: "e-safar",
       href: "https://esafar.vercel.app",
       dates: "2024",
@@ -291,29 +267,6 @@ export const DATA = {
         },
       ],
       image: "/projects/esafar.png",
-      video: "",
-    },
-    {
-      title: "LearnZone",
-      href: "https://learnzone-rho.vercel.app",
-      dates: "2024",
-      active: true,
-      description:
-        "E-learning platform for publishing and consuming courses.",
-      technologies: ["React", "MongoDB", "Prisma", "AWS", "Clerk", "Tailwind CSS"],
-      links: [
-        {
-          type: "Website",
-          href: "https://learnzone-rho.vercel.app",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/abdikadirqulle/Learnzone/",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "/projects/learnZone.png",
       video: "",
     },
   ],
