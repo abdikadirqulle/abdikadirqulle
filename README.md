@@ -21,7 +21,6 @@ I also build products:
 - **[Trackly AI](https://personal-performance-app-api.vercel.app/)** — AI-powered personal performance mobile OS
 - **[SomScholarships](https://som-scholarships.vercel.app/)** — verified scholarships for Somali students
 
-Previously I contributed as a software engineer on **[e-safar](https://esafar.app)**, a digital ticketing platform for public transport.
 
 ---
 
@@ -34,6 +33,7 @@ Previously I contributed as a software engineer on **[e-safar](https://esafar.ap
 | **Trackly AI** | AI personal performance OS — habits, nutrition, workouts, recovery | [Waitlist / site](https://personal-performance-app-api.vercel.app/) |
 | **SomScholarships** | Scholarship discovery with verified eligibility for Somali students | [som-scholarships.vercel.app](https://som-scholarships.vercel.app/) |
 | **APAMS** | Annual Planning and Activities Management System | [Case study](https://casritek.vercel.app/work/apams) |
+| **Prison Management System** | Custodial system for Central Prison Kismayo | [Case study](https://casritek.vercel.app/work/kismayo-prison) |
 | **Casritek** | Agency site for ICT, software & digital services | [casritek.vercel.app](https://casritek.vercel.app) |
 | **Noya SPA** | Bilingual booking site for a Mogadishu beauty studio | [noyaspa.so](http://noyaspa.so/) |
 | **Blue Plastic Center** | Storefront + business platform for a plastics supplier | [Case study](https://casritek.vercel.app/work/blue-plastic) |

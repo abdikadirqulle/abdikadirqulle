@@ -126,16 +126,16 @@ export const DATA = {
         "Cloud notary management system for notary offices — document preparation, digital register with reference numbers, clients, payments, staff permissions, and a secure archive, in English and Somali.",
     },
     {
-      company: "e-safar",
+      company: "Trackly AI",
       badges: [],
-      href: "https://esafar.app",
-      location: "Remote",
-      title: "Software Engineer",
-      logoUrl: "/esafar_app.jpg",
-      start: "July 2024",
-      end: "Sept 2024",
+      href: "https://personal-performance-app-api.vercel.app/",
+      location: "Somalia",
+      title: "Founder",
+      logoUrl: "/trackly-logo.png",
+      start: "2025",
+      end: "Present",
       description:
-        "Digital ticketing platform for public transport. Built backend APIs, payment integrations, and analytics dashboards for operators and passengers.",
+        "Building an AI-powered personal performance mobile OS — habits, nutrition, workouts, recovery, and coaching in one offline-first product.",
     },
   ],
   education: [
@@ -227,6 +227,22 @@ export const DATA = {
         },
       ],
       image: "/projects/apams.jpg",
+      video: "",
+    },
+    {
+      title: "Prison Management System",
+      href: "https://casritek.vercel.app/work/kismayo-prison",
+      dates: "2025",
+      active: true,
+      description:
+        "Custodial information system for Central Prison Kismayo — prisoner records and administrative workflows under the Ministry of Justice.",
+      links: [
+        {
+          type: "Preview",
+          href: "https://casritek.vercel.app/work/kismayo-prison",
+        },
+      ],
+      image: "/projects/prison-system.jpg",
       video: "",
     },
     {
