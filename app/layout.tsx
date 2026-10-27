@@ -4,12 +4,18 @@ import { DATA } from "@/data/resume"
 import { cn } from "@/lib/utils"
 import { Analytics } from "@vercel/analytics/react"
 import type { Metadata } from "next"
-import { Geist } from "next/font/google"
+import { Geist, Newsreader } from "next/font/google"
 import "./globals.css"
 
 const geistSans = Geist({
   subsets: ["latin"],
   variable: "--font-sans",
+})
+
+const newsreader = Newsreader({
+  subsets: ["latin"],
+  variable: "--font-display",
+  style: ["normal", "italic"],
 })
 
 export const metadata: Metadata = {
@@ -58,7 +64,8 @@ export default function RootLayout({
       <body
         className={cn(
           "min-h-screen bg-[#fafafa] font-sans text-neutral-950 antialiased",
-          geistSans.variable
+          geistSans.variable,
+          newsreader.variable
         )}
       >
         <Navbar />

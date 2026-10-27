@@ -11,45 +11,96 @@ export default function Page() {
   return (
     <main className="flex flex-col">
       {/* Hero */}
-      <section className="grid items-center gap-10 pb-20 pt-2 md:grid-cols-[1fr_1fr] md:gap-12 md:pb-28 md:pt-4">
+      <section className="grid items-center gap-12 pb-16 pt-4 md:grid-cols-[1.15fr_0.85fr] md:gap-14 md:pb-24 md:pt-8">
         <BlurFade delay={DELAY}>
-          <div className="space-y-6">
-            <p className="text-sm font-medium tracking-[0.18em] text-neutral-400 uppercase">
-              {DATA.location}
-            </p>
-            <h1 className="text-4xl font-semibold tracking-tight text-neutral-950 sm:text-5xl lg:text-[3.5rem] lg:leading-[1.08]">
+          <div className="space-y-6 md:space-y-7">
+            <div className="inline-flex items-center gap-2 rounded-full border border-emerald-200/80 bg-emerald-50/80 px-3.5 py-1.5 text-sm text-emerald-800">
+              <span className="relative flex size-2">
+                <span className="absolute inline-flex size-full animate-ping rounded-full bg-emerald-400 opacity-60" />
+                <span className="relative inline-flex size-2 rounded-full bg-emerald-500" />
+              </span>
+              Available for new projects
+            </div>
+
+            <p className="text-xs font-medium tracking-[0.2em] text-neutral-400 uppercase">
               {DATA.name}
-            </h1>
-            <p className="max-w-md text-lg leading-relaxed text-neutral-500 sm:text-xl">
-              {DATA.description}
             </p>
-            <div className="flex flex-wrap gap-3 pt-2">
-              <Link
-                href={`mailto:${DATA.contact.email}`}
-                className="inline-flex h-11 items-center rounded-full bg-neutral-950 px-6 text-sm font-medium text-white transition hover:bg-neutral-800"
-              >
-                Start a project
-              </Link>
+
+            <h1 className="font-display max-w-xl text-4xl leading-[1.12] font-medium tracking-tight text-neutral-950 sm:text-5xl lg:text-[3.25rem]">
+              Websites and systems that fit how organisations actually work.
+            </h1>
+
+            <p className="max-w-lg text-base leading-relaxed text-neutral-500 sm:text-lg">
+              I design and ship digital products for businesses and institutions
+              — from public websites to the software that runs behind them.
+            </p>
+
+            <div className="flex flex-wrap gap-3 pt-1">
               <Link
                 href="#projects"
-                className="inline-flex h-11 items-center rounded-full border border-neutral-200 bg-white px-6 text-sm font-medium text-neutral-900 transition hover:bg-neutral-50"
+                className="inline-flex h-11 items-center gap-2 rounded-xl bg-neutral-950 px-5 text-sm font-medium text-white transition hover:bg-neutral-800"
               >
-                View work
+                View my work
+                <span aria-hidden="true">↓</span>
+              </Link>
+              <Link
+                href={`mailto:${DATA.contact.email}`}
+                className="inline-flex h-11 items-center rounded-xl border border-neutral-200 bg-white px-5 text-sm font-medium text-neutral-900 transition hover:bg-neutral-50"
+              >
+                Start a project
               </Link>
             </div>
           </div>
         </BlurFade>
 
         <BlurFade delay={DELAY * 2}>
-          <div className="relative mx-auto aspect-[3/4] w-full max-w-sm overflow-hidden rounded-[2rem] bg-neutral-200 shadow-[0_24px_80px_rgba(0,0,0,0.12)] md:mx-0 md:max-w-md lg:max-w-lg">
-            <Image
-              src={DATA.avatarUrl}
-              alt={DATA.name}
-              fill
-              priority
-              sizes="(max-width: 768px) 90vw, 40vw"
-              className="object-cover object-[center_15%]"
-            />
+          <div className="relative mx-auto w-full max-w-sm md:mx-0 md:max-w-none">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[1.75rem] bg-neutral-200 shadow-[0_20px_60px_rgba(0,0,0,0.1)]">
+              <Image
+                src={DATA.avatarUrl}
+                alt={DATA.name}
+                fill
+                priority
+                sizes="(max-width: 768px) 90vw, 38vw"
+                className="object-cover object-[center_12%]"
+              />
+            </div>
+
+            <div className="absolute bottom-4 left-4 right-4 rounded-2xl border border-white/60 bg-white/90 px-4 py-3 shadow-[0_8px_30px_rgba(0,0,0,0.08)] backdrop-blur-md sm:right-auto sm:min-w-[240px]">
+              <div className="flex items-center justify-between gap-3">
+                <div>
+                  <p className="text-sm font-semibold tracking-tight text-neutral-950">
+                    {DATA.name}
+                  </p>
+                  <p className="text-xs text-neutral-500">
+                    Founder & engineer · {DATA.location}
+                  </p>
+                </div>
+                <span className="size-2.5 shrink-0 rounded-full bg-emerald-500" />
+              </div>
+            </div>
+          </div>
+        </BlurFade>
+      </section>
+
+      {/* Quick facts */}
+      <section className="border-t border-neutral-200/80 py-10 md:py-12">
+        <BlurFade delay={DELAY}>
+          <div className="grid grid-cols-3 gap-6">
+            {[
+              { value: "10+", label: "Products & client builds" },
+              { value: "3", label: "Companies founded" },
+              { value: "2021", label: "Building since" },
+            ].map((stat) => (
+              <div key={stat.label}>
+                <p className="font-display text-3xl tracking-tight text-neutral-300 sm:text-4xl md:text-5xl">
+                  {stat.value}
+                </p>
+                <p className="mt-1 text-xs text-neutral-500 sm:text-sm">
+                  {stat.label}
+                </p>
+              </div>
+            ))}
           </div>
         </BlurFade>
       </section>
