@@ -7,7 +7,7 @@ export const PUBLIC_PORTFOLIO: PortfolioConfig = {
   description:
     "Personal professional portfolio focused on government ICT, institutional information systems, and public-sector digital projects.",
   summary:
-    "I'm Abdikadir Qulle — a software developer and founder based in Somalia. Through Casritek I build websites and custom systems for NGOs and public institutions, including institutional planning and custodial information systems. This site highlights that public-sector work; it is a personal professional portfolio, not an official government website.",
+    "I'm Abdikadir Qulle — a software engineer and founder based in Somalia. Through Casritek I build websites and custom systems for NGOs and public institutions, including institutional planning and custodial information systems. This site highlights that public-sector work; it is a personal professional portfolio, not an official government website.",
   headline: "Government ICT & public-sector systems",
   nav: [
     { href: "/#profile", label: "Profile" },

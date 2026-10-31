@@ -19,7 +19,7 @@ export default function Page() {
             </p>
 
             <h1 className="max-w-xl text-4xl font-semibold leading-[1.12] tracking-tight text-neutral-950 sm:text-5xl lg:text-[3.25rem]">
-              Full stack software engineer
+              Software engineer
             </h1>
 
             <p className="max-w-lg text-base leading-relaxed text-neutral-500 sm:text-lg">

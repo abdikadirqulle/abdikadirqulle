@@ -5,10 +5,10 @@ export const SE_PORTFOLIO: PortfolioConfig = {
   url: "https://abdikadirqulle.com",
   title: "Abdikadir Qulle",
   description:
-    "Full-stack developer and founder. I design and build websites, software, and systems that help organisations work better.",
+    "I design and build websites, software, and systems for businesses, NGOs, and institutions — clear products that keep working after launch.",
   summary:
-    "I'm Abdikadir Qulle — a software developer and founder based in Somalia. Through Casritek I build websites and custom systems for businesses, NGOs, and institutions. I also co-founded E-xisaabi, financial software for small businesses. I care about clear product thinking, solid engineering, and work that lasts after launch.",
-  headline: "Full stack software engineer",
+    "I'm Abdikadir Qulle — a software engineer and founder based in Somalia. Through Casritek I build websites and custom systems for businesses, NGOs, and institutions. I also co-founded E-xisaabi, financial software for small businesses. I care about clear product thinking, solid engineering, and work that lasts after launch.",
+  headline: "Software engineer",
   nav: [
     { href: "/#projects", label: "Work" },
     { href: "/blog", label: "Blog" },
