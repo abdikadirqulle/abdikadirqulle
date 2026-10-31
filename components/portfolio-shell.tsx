@@ -2,6 +2,7 @@ import Navbar from "@/components/navbar"
 import { PortfolioFooter } from "@/components/portfolio-footer"
 import { PortfolioNav } from "@/components/portfolio-nav"
 import { SiteFooter } from "@/components/site-footer"
+import { WhatsAppFloat } from "@/components/whatsapp-float"
 import { ICT_PORTFOLIO } from "@/data/portfolios/ict"
 import { PUBLIC_PORTFOLIO } from "@/data/portfolios/public"
 import type { PortfolioId } from "@/data/types"
@@ -40,6 +41,7 @@ export function PortfolioShell({ portfolio, children }: Props) {
           wordmark="ICT"
           wordmarkClassName="translate-y-[32%] whitespace-nowrap text-center text-[18vw] font-bold leading-none tracking-tighter text-slate-900/[0.06] sm:text-[8rem] md:text-[10rem]"
         />
+        <WhatsAppFloat />
       </div>
     )
   }
@@ -73,6 +75,7 @@ export function PortfolioShell({ portfolio, children }: Props) {
           wordmark="Public"
           wordmarkClassName="translate-y-[32%] whitespace-nowrap text-center font-[family-name:var(--font-public-serif)] text-[16vw] font-semibold leading-none tracking-tighter text-slate-900/[0.05] sm:text-[7rem] md:text-[9rem]"
         />
+        <WhatsAppFloat />
       </div>
     )
   }
@@ -84,6 +87,7 @@ export function PortfolioShell({ portfolio, children }: Props) {
         {children}
       </div>
       <SiteFooter />
+      <WhatsAppFloat />
     </>
   )
 }

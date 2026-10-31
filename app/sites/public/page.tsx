@@ -230,21 +230,42 @@ export default function PublicPage() {
             <p className="text-lg text-slate-600">
               {PUBLIC_PORTFOLIO.contactBody}
             </p>
-            <div className="flex flex-wrap items-center gap-3 pt-2">
-              <Link
-                href={`mailto:${PERSON.contact.email}`}
-                className="inline-flex h-11 items-center rounded-md bg-slate-900 px-5 text-sm font-medium text-[#f7f5f0] transition hover:bg-slate-800"
-              >
-                {PERSON.contact.email}
-              </Link>
-              <Link
-                href={PERSON.contact.social.LinkedIn.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-slate-600 hover:text-slate-900"
-              >
-                LinkedIn
-              </Link>
+            <div className="flex flex-col gap-4 pt-2">
+              <div className="flex flex-wrap items-center gap-3">
+                <Link
+                  href={`mailto:${PERSON.contact.email}`}
+                  className="inline-flex h-11 items-center rounded-md bg-slate-900 px-5 text-sm font-medium text-[#f7f5f0] transition hover:bg-slate-800"
+                >
+                  {PERSON.contact.email}
+                </Link>
+                <p className="text-sm text-slate-600">
+                  or{" "}
+                  <a
+                    href="mailto:hello@abdikadirqulle.com"
+                    className="font-medium text-slate-800 underline decoration-slate-300 underline-offset-4 hover:decoration-slate-900"
+                  >
+                    hello@abdikadirqulle.com
+                  </a>
+                </p>
+              </div>
+              <div className="flex flex-wrap gap-4 text-sm text-slate-600">
+                <Link
+                  href={PERSON.contact.whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-slate-900"
+                >
+                  WhatsApp {PERSON.contact.tel}
+                </Link>
+                <Link
+                  href={PERSON.contact.social.LinkedIn.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-slate-900"
+                >
+                  LinkedIn
+                </Link>
+              </div>
             </div>
           </div>
         </BlurFade>

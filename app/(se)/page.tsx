@@ -222,23 +222,33 @@ export default function Page() {
               A new website, software for your team, or something you&apos;re
               still working out.
             </p>
-            <div className="flex flex-wrap items-center gap-3 pt-2">
-              <Link
-                href={`mailto:${DATA.contact.email}`}
-                className="inline-flex h-11 items-center rounded-full bg-neutral-950 px-5 text-sm font-medium text-white transition hover:bg-neutral-800"
-              >
-                {DATA.contact.email}
-              </Link>
-              <p className="text-sm text-neutral-500">
-                or{" "}
-                <a
-                  href="mailto:hello@abdikadirqulle.com"
-                  className="font-medium text-neutral-700 underline decoration-neutral-300 underline-offset-4 hover:decoration-neutral-900"
+            <div className="flex flex-col gap-4 pt-2">
+              <div className="flex flex-wrap items-center gap-3">
+                <Link
+                  href={`mailto:${DATA.contact.email}`}
+                  className="inline-flex h-11 items-center rounded-full bg-neutral-950 px-5 text-sm font-medium text-white transition hover:bg-neutral-800"
                 >
-                  hello@abdikadirqulle.com
-                </a>
-              </p>
-              <div className="flex w-full gap-4 text-sm text-neutral-500">
+                  {DATA.contact.email}
+                </Link>
+                <p className="text-sm text-neutral-500">
+                  or{" "}
+                  <a
+                    href="mailto:hello@abdikadirqulle.com"
+                    className="font-medium text-neutral-700 underline decoration-neutral-300 underline-offset-4 hover:decoration-neutral-900"
+                  >
+                    hello@abdikadirqulle.com
+                  </a>
+                </p>
+              </div>
+              <div className="flex flex-wrap gap-4 text-sm text-neutral-500">
+                <Link
+                  href={DATA.contact.whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-neutral-950"
+                >
+                  WhatsApp {DATA.contact.tel}
+                </Link>
                 <Link
                   href={DATA.contact.social.GitHub.url}
                   target="_blank"

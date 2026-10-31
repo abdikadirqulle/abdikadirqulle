@@ -11,6 +11,11 @@ export const PERSON = {
     email: "abdikadirqulle@gmail.com",
     emails: ["abdikadirqulle@gmail.com", "hello@abdikadirqulle.com"],
     tel: "+252 61 7797802",
+    /** Digits only for wa.me links. */
+    whatsapp: "252617797802",
+    whatsappUrl: `https://wa.me/252617797802?text=${encodeURIComponent(
+      "Hi Abdikadir — hope you're doing well. I found your website and would like to connect."
+    )}`,
     social: {
       GitHub: {
         name: "GitHub",
